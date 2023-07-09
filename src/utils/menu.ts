@@ -1,14 +1,14 @@
 export const homepage_menu = [
   {
-    title: "Join Us",
-    where: "/pages",
+    title: "Home",
+    where: "",
   },
   {
-    title: "Enquiry",
-    where: "/pages",
+    title: "Contact Us",
+    where: "contact",
   },
   {
-    title: "Pricing",
-    where: "/pages",
+    title: "Gallery",
+    where: "pages",
   },
 ];

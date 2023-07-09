@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { homepage_menu } from "../../utils/menu";
 
 const Header = () => {
@@ -14,17 +15,21 @@ const Header = () => {
         >
           {homepage_menu.map((each) => (
             <li key={each.title}>
-              <a rel="stylesheet" href={each.where}>
+              <Link
+                rel="stylesheet"
+                className={`text-gray-700`}
+                to={each.where}
+              >
                 {each.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
       <button
-        className={` bg-purple-600 w-auto text-white p-1 rounded-md px-3 `}
+        className={`bg-purple-600 w-auto text-white p-1 rounded-md px-3 `}
       >
-        Get Started
+        Member Login
       </button>
     </div>
   );
