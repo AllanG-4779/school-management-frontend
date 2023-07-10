@@ -22,10 +22,6 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        {/* <div>
-          <p className={`text-gray-500 text-lg`}>+254-733588068</p>
-          <p className={`text-gray-500 text-lg`}>+254-722505904</p>
-        </div> */}
         <div className="flex flex-row items-center gap-10">
           <div className="bg-purple-500 p-2 rounded-full ">
             <FaPhone />

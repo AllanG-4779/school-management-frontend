@@ -1,14 +1,15 @@
 export const homepage_menu = [
   {
     title: "Home",
-    where: "",
+    path: "",
   },
   {
     title: "Contact Us",
-    where: "contact",
+    path: "contact",
   },
   {
     title: "Gallery",
-    where: "pages",
+    path: "pages",
   },
 ];
+
