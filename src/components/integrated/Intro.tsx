@@ -7,13 +7,13 @@ const Intro = () => {
       <div
         className={`flex flex-row p-6 w-11/12 mx-auto mt-12 justify-between`}
       >
-        <div className="text-section font-sans">
-          <h1>Quality Education for the Vulnerable Communities</h1>
-          <h1 className={`text-5xl  font-extrabold mt-5 text-gray-800`}>
-            Grab an opportunity to fulfull your dream career{" "}
+        <div className="text-section">
+          <h1 className={"text-gray-800"}>Quality Education for the Vulnerable Communities</h1>
+          <h1 className={`text-5xl  font-extrabold mt-5 text-gray-800 font-primary`}>
+            Grab an opportunity Join to fulfull your dream career{" "}
           </h1>
           <p className={`text-gray-500 mt-3`}>
-            St Michaels Secondary school is duly accredited by the MOE of Kenya
+            St Michael's Secondary school is duly accredited by the MOE of Kenya
             to provide Secondary Education within the 8-4-4 curriculum
           </p>
           <div className={`flex flex-row mt-5 w-full  gap-4`}>

@@ -7,12 +7,11 @@ import {homepage_menu} from "../../utils/menu";
 const Homepage = () => {
   return (
     <>
-      <div>
+      <div className={"font-primary"}>
         <Header page={"Homepage"}
                 items={homepage_menu}
                 actionButton={true}
-                location={{path: "/", text: "Member Login"}}
-
+                location={{path: "/auth", text: "Member Login"}}
         />
         <Routes>
           <Route path="" element={<Intro />} />
