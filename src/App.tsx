@@ -9,7 +9,7 @@ const App = () => {
       <Routes>
         <Route path="/homepage/*" element={<Homepage />} />
         <Route path={"/auth/*"} element={<OnBoarding />} />
-        <Route path="/admin/dashboard" element={<Index />} />        
+        <Route path="/admin/dashboard/*" element={<Index />} />        
       </Routes>
     </div>
   );
