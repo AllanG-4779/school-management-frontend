@@ -7,17 +7,17 @@ export const useToggle = () => {
   };
   return [show, toggle];
 };
-type menuItems = {
+export type menuItems = {
   label: string;
   to: string;
   active: boolean;
   icon?: React.ReactElement;
-  children:{label: string, to: string, active: boolean}[]
-}[];
+  children?:{label: string, to: string, active: boolean}[]
+};
 
-export const toggleActiveMenu = (items: menuItems) => {
-  const [menu, setMenu] = useState<menuItems>(items);
-  const toggleId = (keyId: unknown) => {
+export const toggleActiveMenu = (items: menuItems[]) => {
+  const [menu, setMenu] = useState<menuItems[]>(items);
+  const toggleId = (keyId: string) => {
     setMenu((prev) => {
       const udpatedItems = prev?.map((each) => {
         if (each.label == keyId) {

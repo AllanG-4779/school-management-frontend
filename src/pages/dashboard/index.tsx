@@ -6,7 +6,7 @@ import StudentDashboard from "../../components/integrated/StudentDashboard";
 const menuItems = [
   {
     label: "Students",
-    to: "/admin/dashboard/student",
+    to: "/admin/dashboard/student/home",
     icon: <GoPerson />,
     children: [
       {
@@ -21,7 +21,7 @@ const menuItems = [
       },
       {
         label: "Edit Student",
-        to: "/admin/dashboard/student/all",
+        to: "/admin/dashboard/student/edit",
         active: false,
       },
     ],
@@ -35,17 +35,17 @@ const menuItems = [
     children: [
       {
         label: "New Staff",
-        to: "/admin/dashboard/student/all",
+        to: "/admin/dashboard/staff/new",
         active: false,
       },
       {
         label: "Edit Staff",
-        to: "/admin/dashboard/student/all",
+        to: "/admin/dashboard/staff/update",
         active: false,
       },
       {
         label: "All Staff",
-        to: "/admin/dashboard/student/all",
+        to: "/admin/dashboard/staff/all",
         active: false,
       },
     ],
@@ -77,10 +77,13 @@ const Index = () => {
         <div className="flex flex-col h-full w-2/12">
           <Sidebar color="white" menu={menuItems} />
         </div>
-        <div className="p-3 bg-gray-100 mx-auto flex-1">
-          <Routes>
-            <Route path="student" element={<StudentDashboard />} />
-          </Routes>
+        <div className="bg-gray-100 mx-auto flex-1">
+          <div className="bg-white h-11"></div>
+          <div className="p-3">
+            <Routes>
+              <Route path="student" element={<StudentDashboard />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </>
