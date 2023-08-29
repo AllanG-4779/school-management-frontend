@@ -3,6 +3,7 @@ import Sidebar from "../../components/integrated/SideBar";
 import { GoPerson } from "react-icons/go";
 import { Route, Routes } from "react-router-dom";
 import StudentDashboard from "../../components/integrated/StudentDashboard";
+import AddStudent from "../../components/integrated/AddStudent";
 const menuItems = [
   {
     label: "Students",
@@ -77,11 +78,13 @@ const Index = () => {
         <div className="flex flex-col h-full w-2/12">
           <Sidebar color="white" menu={menuItems} />
         </div>
-        <div className="bg-gray-100 mx-auto flex-1">
+        <div className="bg-gray-100 mx-auto h-screen flex-1">
+          {/* The top navigation menu */}
           <div className="bg-white h-11"></div>
           <div className="p-3">
             <Routes>
               <Route path="student" element={<StudentDashboard />} />
+              <Route path="student/all" element={<AddStudent />} />
             </Routes>
           </div>
         </div>

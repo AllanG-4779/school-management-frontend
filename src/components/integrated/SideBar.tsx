@@ -23,7 +23,7 @@ const Sidebar = ({ menu, color }: SidebarProps) => {
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col text-gray-600 gap-2 text-xs">
             {menuItems.map((each) => (
-              <div className="flex flex-col ">
+              <div className="flex flex-col " key={each.label}>
                 <div className="flex justify-between items-center">
                   <div
                     onClick={() => setItems(each.label)}
