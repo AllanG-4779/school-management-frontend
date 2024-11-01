@@ -4,34 +4,31 @@ import { FaAngleUp } from "react-icons/fa6";
 
 const AnalyticsCard: React.FC<BadgeProps> = ({
   current,
-  previous,
   analytic,
   parentIcon,
+  bg,
+  fore,
 }) => {
   return (
     <div
-      className={`bg-white rounded-md p-3 min-h-[8rem] flex items-center gap-2 flex-col min-w-[13rem] shadow-sm flex-1`}
+      className={`${bg} rounded-md p-3 min-h-[7rem]  relative flex items-center  gap-2 shadow-sm flex-1`}
     >
-      <div
-        className={`${
-          current > previous ? "bg-green-100" : "bg-red-100"
-        } rounded-full p-3 flex items-center justify-center`}
-      >
+      <div className="flex w-full  h-full items-center justify-between flex-row-reverse">
         <div
-          className={`${
-            current > previous ? "text-green-400" : "text-red-700"
-          }`}
+          className={` ${bg} rounded-full p-3 flex items-center justify-center`}
         >
-          {parentIcon}
+          <div className={` text-3xl ${fore} flex items-center justify-center`}>
+            {parentIcon}
+          </div>
+        </div>
+        <div className="flex flex-col-reverse gap-3">
+          <p className="font-bold text-2xl text-gray-700">
+            {formatDisplay(current)}
+          </p>
+          <p className="text-gray-400 text-sm font-light">{analytic}</p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <p className="font-bold text-2xl text-gray-700">
-          {formatDisplay(current)}
-        </p>
-        <p className="text-gray-400 text-sm font-light">{analytic}</p>
-      </div>
-      <ComparisonBadge previous={previous} current={current} />
+      {/* <ComparisonBadge previous={previous} current={current} /> */}
     </div>
   );
 };
@@ -45,7 +42,7 @@ export const ComparisonBadge = ({
 }) => {
   return (
     <div
-      className={`flex  gap-2 items-center justify-center p-1 rounded-xl min-w-[7rem] ${
+      className={`flex absolute right-2 top-3 gap-2 items-center justify-center text-xs p-[4px] rounded-xl min-w-[1rem] ${
         previous > current
           ? " text-red-700  bg-red-100"
           : "text-green-600 bg-green-100"
@@ -61,6 +58,8 @@ type BadgeProps = {
   current: number;
   previous: number;
   analytic: string;
+  bg: string;
+  fore: string;
   parentIcon: ReactNode;
 };
 
