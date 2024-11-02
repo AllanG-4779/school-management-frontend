@@ -6,9 +6,10 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaIndustry } from "react-icons/fa6";
 import PerformanceComponet from "../components/PerformanceComponet";
 import Donut from "../components/Donut";
-import StudentList from "../components/StudentList";
+import TableComponent from "../components/TableComponent";
 import Notice from "../components/Notice";
 import { TbPictureInPictureTop } from "react-icons/tb";
+import { StudentPerformance } from "../utils/types";
 
 const DashboardPage = () => {
   return (
@@ -61,8 +62,51 @@ const DashboardPage = () => {
       </div>
       <div className="flex gap-3 flex-wrap">
         <div className="bg-white p-3 rounded-md gap-3 flex-[2]">
-          <p className="font-bold text-md">Internal Performance - Term 1</p>
-          <StudentList />
+          <p className="font-bold text-md">Top Performers - Term 1 - 2023</p>
+          <TableComponent<StudentPerformance>
+            titles={[
+              "#",
+              "Name",
+              "Class",
+              "Marks",
+              "Year",
+              "Term",
+              "Exam",
+              "Grade",
+            ]}
+            data={[
+              {
+                index: 1,
+                name: "Perpetua Kabute",
+                form: "2S",
+                total: 450,
+                exam: "FOMOCA Exam",
+                year: "2024",
+                grade: "A",
+                term: "TERM 3",
+              },
+              {
+                index: 2,
+                name: "Kinuthia Aminata",
+                form: "4s",
+                total: 500,
+                exam: "MOBRU Exam",
+                year: "2024",
+                grade: "A",
+                term: "TERM 3",
+              },
+              {
+                index: 4,
+                name: "Gregory Ouma",
+                form: "3S",
+                total: 1120,
+                exam: "JESMAF Exam",
+                year: "2024",
+                grade: "A",
+                term: "TERM 3",
+              },
+            ]}
+          />
           <a href="">View All</a>
         </div>
         <div className="bg-white p-3 rounded-md gap-3 flex-[1]">

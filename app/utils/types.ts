@@ -14,3 +14,28 @@ export type Notice = {
   bgColor: string;
   text: string;
 };
+export type TableProps<T> = {
+  titles: string[];
+  data: T[];
+};
+export type StudentPerformance = {
+  index: number;
+  name: string;
+  form: string;
+  total: number;
+  year: string;
+  term: string;
+  grade: string;
+  exam: string;
+};
+
+export type StudentData = {
+  firstName: string;
+  lastName: string;
+  stream: string;
+  admno: string;
+  parentName: string;
+  parentContact: string;
+  prevGrade: string;
+  yearAdm: string;
+};

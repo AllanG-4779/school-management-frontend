@@ -89,7 +89,7 @@ const menuItems = [
   {
     icon: <PiStudent />,
     label: "Students",
-    to: "/students",
+    to: "/dashboard/students",
   },
   {
     icon: <GiTeacher />,
