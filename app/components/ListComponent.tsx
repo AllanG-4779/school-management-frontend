@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import TableComponent from "./TableComponent";
 import { StudentData } from "../utils/types";
+import Link from "next/link";
 
 const ListComponent = () => {
   return (
@@ -28,9 +29,11 @@ const ListComponent = () => {
               <option value="A-Z">A-Z</option>
             </select>
           </div>
-          <div className="p-2 bg-purple-600 text-white rounded-md min-w-[6rem] flex items-center gap-2 ">
-            <FaPlus className="text-white" />
-            <p className="font-bold ">New Item</p>
+          <div className="p-2 bg-purple-600 hover:bg-purple-700  cursor-pointer text-white rounded-md min-w-[6rem] ">
+            <Link href={"./students/new"} className="flex items-center gap-2 ">
+              <FaPlus className="text-white" />
+              <p className="font-bold ">New Student</p>
+            </Link>
           </div>
         </div>
       </div>

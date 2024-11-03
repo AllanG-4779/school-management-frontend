@@ -13,7 +13,7 @@ const NavigationBar = ({
   current: boolean;
 }) => {
   return (
-    <nav className="flex p-3 items-center">
+    <nav className="flex p-3 items-center ">
       <div className="hidden md:flex  flex-1 bg-[#eaeeff] rounded-md ">
         <input
           type="text"

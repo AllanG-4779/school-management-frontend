@@ -8,7 +8,7 @@ const Donut = () => {
   const options = {
     responsive: true,
     // maintainAspectRatio: false,
-  };
+  }; 
   const finalData = {
     labels: ["Male", "Female"],
     datasets: [

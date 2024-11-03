@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <div className="flex flex-col">
       <div className="flex">
         <SideBar visible={menuStatus} />
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full ">
           <NavigationBar current={menuStatus} toggle={updateState} />
           <div
             className="p-5 bg-slate-100 min-h-full"
