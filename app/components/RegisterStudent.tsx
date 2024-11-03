@@ -11,6 +11,9 @@ const PersonalInformation = () => {
         items={[
           <AcademicInformation key="steps" />,
           <GuardianInformation key="items" />,
+          <GuardianInformation key="page" />,
+          <GuardianInformation key="st" />,
+          <GuardianInformation key="md" />,
         ]}
       />
     </div>
