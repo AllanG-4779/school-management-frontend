@@ -4,7 +4,7 @@ const AcademicInformation = () => {
   return (
     <div>
       {" "}
-      <div className="p-2 bg-white rounded-md border flex flex-col gap-2 shadow-sm w-10/12 mx-auto">
+      <div className="p-2 bg-white rounded-md border flex flex-col gap-2 shadow-sm">
         <p className="text-slate-500 font-bold">
           Parent / Guardian Information
         </p>

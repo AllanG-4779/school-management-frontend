@@ -17,6 +17,7 @@ export type Notice = {
 export type TableProps<T> = {
   titles: string[];
   data: T[];
+  onClick?: (item: T) => void;
 };
 export type StudentPerformance = {
   index: number;

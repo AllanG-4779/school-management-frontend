@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { TableProps } from "../utils/types";
 
@@ -20,7 +21,13 @@ const TableComponent = <T,>(props: TableProps<T>) => {
           </thead>
           <tbody className="divide-y divide-gray-120">
             {props.data.map((each, index) => (
-              <tr key={index} className="bg-white">
+              <tr
+                key={index}
+                className="bg-white cursor-pointer hover:bg-gray-50"
+                onClick={() => {
+                  return props.onClick && props.onClick(each);
+                }}
+              >
                 {Object.values(each as string).map((item, index) => (
                   <td
                     key={index}

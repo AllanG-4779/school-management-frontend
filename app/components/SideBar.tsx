@@ -99,8 +99,8 @@ const menuItems = [
 
   {
     icon: <CiSettings />,
-    label: "Settings",
-    to: "/settings",
+    label: "Session",
+    to: "/dashboard/session",
   },
   {
     icon: <GiPresent />,
