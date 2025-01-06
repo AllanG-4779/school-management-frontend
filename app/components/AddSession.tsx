@@ -4,7 +4,7 @@ import TableComponent from "./TableComponent";
 import { useRouter } from "next/navigation";
 import { FaPlus } from "react-icons/fa6";
 import GeneralModal from "./registration-components/GeneralModal";
-import PersonalInformation from "./registration-components/PersonalInformation";
+import NewSession from "./NewSession";
 
 const AddSession = ({ props }: SessionProps) => {
   const router = useRouter();
@@ -41,11 +41,11 @@ const AddSession = ({ props }: SessionProps) => {
       </div>
       <GeneralModal
         title="Add Session"
-        footer={<Footer close={() => setStatus(false)} /> }
+        footer={<Footer close={() => setStatus(false)} />}
         status={status}
         toggle={() => setStatus(false)}
       >
-        <PersonalInformation />
+        <NewSession />
       </GeneralModal>
     </div>
   );
@@ -69,8 +69,8 @@ export default AddSession;
 
 export type Session = {
   name: string;
-  start: string;
-  end: string;
+  start: Date;
+  end: Date;
   description: string;
   status: ReactNode;
   exams: number;
@@ -80,3 +80,8 @@ export type Session = {
 export type SessionProps = {
   props: Session[];
 };
+
+export type ClassEnrollment = {
+  name: string;
+  number: number;
+}[]

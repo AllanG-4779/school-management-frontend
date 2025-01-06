@@ -5,14 +5,14 @@ import React from "react";
 
 const SchoolSession = () => {
   return (
-    <div>
+    <div className="relative">
       <SessionComponent
         props={[
           {
             name: "2024-2025 Term 3",
             description: "Term 3",
-            start: new Date().getTime().toString(),
-            end: new Date().getTime().toString(),
+            start: new Date(),
+            end: new Date(),
             status: <Badge bg="bg-green-100" text="Ongoing" />,
             exams: 0,
             students: 0,
